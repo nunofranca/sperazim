@@ -1,0 +1,151 @@
+
+
+
+/*===========================
+    12.ABOUT css 
+===========================*/
+
+.about-area{
+	& .about-thumb{
+		position: relative;
+		z-index: 5;
+		&::before{
+			position: absolute;
+			content: '';
+			height: 630px;
+			width: 630px;
+			border: 120px solid $theme-color;
+			transform: rotate(45deg);
+			background: $white;
+			z-index: -1;
+			left: -200px;
+			top: 40px;
+			@media #{$lg} {
+				height: 500px;
+				width: 500px;
+			}
+			@media #{$md} {
+				height: 500px;
+				width: 500px;
+				top: 85px;
+			}
+			@media #{$xs} {
+				display: none;
+			}
+		}
+	}
+	& .about-item{
+		padding-left: 30px;
+		position: relative;
+		@media #{$xs} {
+			padding-left: 0;
+		}
+		&::before{
+			position: absolute;
+			content: '';
+			width: 0;
+			height: 0;
+			border-top: 30px solid $theme-color;
+			border-right: 30px solid transparent;
+			right: 0px;
+			bottom: -100px;
+		}
+		& > span{
+			color: $theme-color;
+			font-weight: 700;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
+		& .title{
+			font-size: 60px;
+			line-height: 70px;
+			padding-top: 18px;
+			padding-bottom: 36px;
+			@media #{$xs} {
+				font-size: 38px;
+				line-height: 48px;
+			}
+			@media #{$sm} {
+				font-size: 50px;
+				line-height: 60px;
+			}
+		}
+		& p{
+			color: #69a1bb;
+		}
+		& .about-experience{
+			display: flex;
+			align-items: center;
+			margin-top: 10px;
+			margin-bottom: 28px;
+			& h3{
+				font-weight: 700;
+				color: $theme-color;
+				font-size: 100px;
+				font-family: $gilroy;
+				padding-right: 15px;
+				position: relative;
+				&::before{
+					position: absolute;
+					content: '';
+					width: 0;
+					height: 0;
+					border-top: 30px solid $theme-color;
+					border-right: 30px solid transparent;
+					left: -48px;
+					top: 23px;
+				}
+			}
+			& span{
+				font-size: 30px;
+				line-height: 40px;
+				font-family: $gilroy;
+				font-weight: 700;
+				color: $heading-color;
+				text-transform: capitalize;
+				@media #{$xs} {
+					font-size: 26px;
+				}
+				@media #{$sm} {
+					font-size: 30px;
+				}
+
+			}
+		}
+		& ul{
+			& li{
+				display: inline-block;
+				& a{
+					border-radius: 0;
+					background: $theme-color;
+					color: $white;
+					border-color: $theme-color;
+					@media #{$lg} {
+						padding: 0 35px;
+					}
+					&:hover{
+						border-color: #b7c3d6;
+						background: #b7c3d6;
+					}
+					&.main-btn-2{
+						background: #b7c3d6;
+						border-color: #b7c3d6;
+						margin-left: 18px;
+						@media #{$xs} {
+							margin-left: 0;
+							margin-top: 20px;
+						}
+						@media #{$sm} {
+							margin-left: 18px;
+							margin-top: 0;
+						}
+						&:hover{
+							border-color: $theme-color;
+							background: $theme-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}

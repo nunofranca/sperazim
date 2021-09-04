@@ -1,0 +1,146 @@
+
+
+
+/*===============================
+    36.WHY CHOOSE css 
+================================*/
+
+
+.why-choose-area{
+	background: #101028;
+	padding-top: 113px;
+	padding-bottom: 113px;
+	position: relative;
+	overflow: hidden;
+	z-index: 9;
+	& .section-title{
+		& span{
+			color: $white;
+
+		}
+		& .title{
+			color: $white;
+			font-size: 55px;
+			line-height: 66px;
+			padding-bottom: 3px;
+            @media #{$lg} {
+                font-size: 44px;
+                line-height: 56px;
+            }
+            @media #{$md} {
+                font-size: 44px;
+                line-height: 56px;
+            }
+            @media #{$xs} {
+                font-size: 30px;
+                line-height: 40px;
+            }
+            @media #{$sm} {
+                font-size: 36px;
+                line-height: 46px;
+            }
+			&::before{
+				display: none;
+			}
+		}
+	}
+	& .single-choose{
+		& .icon-box{
+			height: 175px;
+			width: 175px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 200px;
+			border: 2px solid rgb(37, 37, 67);
+			background: radial-gradient(circle, #8383f9 0%, rgba(209,209,223,0) 50%, rgba(255,255,255,0) 74%);
+			position: relative;
+			display: inline-block;
+			z-index: 5;
+			& i{
+				font-size: 60px;
+				color: $white;
+			}
+			& span{
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				width: 100%;
+				border-radius: 50%;
+				z-index: -1;
+				@include animation(rotate-2 30s linear infinite);
+
+				&::before{
+					position: absolute;
+					content: '';
+					height: 15px;
+					width: 15px;
+					background: $white;
+					top: -8px;
+					left: 50%;
+					transform: translateX(-50%);
+					border-radius: 50%;
+				}
+				&::after{
+					position: absolute;
+					content: '';
+					height: 7px;
+					width: 7px;
+					background: $white;
+					bottom: -4px;
+					left: 50%;
+					transform: translateX(-50%);
+					border-radius: 50%;
+				}
+			}
+		}
+		& h4{
+			font-size: 26px;
+			color: $white;
+			padding-top: 50px;
+			font-weight: 600;
+
+		}
+		& p{
+			font-size: 15px;
+			line-height: 32px;
+			color: #c7c7ff;
+			padding: 0 20px;
+			padding-top: 20px;
+            @media #{$lg} {
+                padding: 0;
+            }
+            @media #{$md} {
+            	padding: 0;
+            	padding-top: 20px;
+            }
+            @media #{$xs} {
+            	padding: 0;
+            	padding-top: 20px;
+            }
+            @media #{$sm} {
+            	padding: 0 20px;
+            	padding-top: 20px;
+            }
+		}
+	}
+	& .choose-dot{
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		& img{
+			width: 100%;
+		}
+	}
+	& .choose-shape{
+		position: absolute;
+		left: 0;
+		top: -170px;
+		z-index: -1;
+		& img{
+			width: 100%;
+		}
+	}
+}
+

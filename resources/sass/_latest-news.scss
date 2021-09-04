@@ -1,0 +1,122 @@
+
+
+
+/*===============================
+    40.LATEST NEWS css 
+================================*/
+
+.latest-news-area{
+    padding-top: 112px;
+    padding-bottom: 120px;
+    & .section-title{
+        & span{
+            letter-spacing: 3px;
+        }
+        & .title{
+            font-size: 55px;
+            line-height: 65px;
+            color: $black;
+            margin-bottom: 80px;
+            @media #{$md} {
+                font-size: 40px;
+                line-height: 50px;
+                padding: 0 135px;
+            }
+            @media #{$xs} {
+                font-size: 30px;
+                line-height: 40px;
+            }
+            @media #{$sm} {
+                font-size: 36px;
+                line-height: 46px;
+                padding: 0 80px;
+            }
+            &::before{
+                display: none;
+            }
+        }
+    }
+    & .letast-news-grid{
+        padding-bottom: 80px;
+        padding-top: 42px;
+        box-shadow: 0px 16px 32px 0px rgba(228, 228, 228, 0.56);
+        @media #{$xs} {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        & .letest-news-item{
+            @media #{$sm} {
+                padding: 0 65px;
+            }
+            & span{
+                font-size: 14px;
+                color: $theme-color;
+                font-weight: 700;
+                padding-bottom: 7px;
+                
+            }
+            & .title{
+                font-size: 24px;
+                line-height: 35px;
+                padding-bottom: 25px;
+                @media #{$lg} {
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+                @media #{$md} {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+                @media #{$xs} {
+                    font-size: 17px;
+                    line-height: 27px;
+                }
+                @media #{$sm} {
+                    font-size: 24px;
+                    line-height: 35px;
+                }
+                & a{
+                    color: $black;
+                }
+            }
+            & p{
+                color: #616161;
+                font-size: 15px;
+                line-height: 32px;
+            }
+            & > a{
+                font-size: 15px;
+                color: $black;
+                background-color: transparent;
+                border-color: $theme-color;
+                padding: 0 40px;
+                margin-top: 32px;
+                &:hover{
+                    background: $theme-color;
+                    color: $white;
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+
+.brand-2-area{
+    padding-top: 120px;
+    & .brand-item{
+        text-align: center;
+        & img{
+            opacity: .2;
+            @include transition(0.3s);
+            display: inline-block;
+            
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}
+

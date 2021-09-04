@@ -1,0 +1,48 @@
+
+
+
+/*===========================
+    20.COUNTER css 
+===========================*/
+
+.counter-area{
+	& .counter-item{
+		position: relative;
+		padding-left: 80px;
+		@media #{$lg} {
+			padding-left: 55px;
+		}
+		@media #{$sm} {
+			padding-left: 70px;
+		}
+		& .title{
+			font-size: 16px;
+			color: $white;
+			font-weight: 400;
+			& span{
+				font-size: 50px;
+				font-weight: 700;
+			}
+		}
+		& p{
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: capitalize;
+			color: $white;
+			opacity: .6;
+			@media #{$lg} {
+				font-size: 13px;
+			}
+		}
+		& i{
+			position: absolute;
+			left: 0;
+			top: 12px;
+			color: $white;
+			font-size: 50px;
+			@media #{$lg} {
+				font-size: 34px;
+			}
+		}
+	}
+}

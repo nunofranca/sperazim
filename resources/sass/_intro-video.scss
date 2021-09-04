@@ -1,0 +1,148 @@
+
+
+
+/*===========================
+    13.INTRO VIDEO css 
+===========================*/
+
+.intro-video-area{
+	& .intro-overlay{
+		background-color: rgba(0, 21, 45,.9);
+		padding-top: 90px;
+		padding-bottom: 145px;
+		& .intro-video-content{
+			& span{
+				color: $theme-color;
+				letter-spacing: 2px;
+				font-weight: 700;
+				text-transform: uppercase;
+				margin-top: -7px;
+				&.bar{
+					position: relative;
+					&::before{
+						position: absolute;
+						content: '';
+						right: -100px;
+						top: 10px;
+						height: 2px;
+						width: 70px;
+						background: $theme-color;
+					}
+				}
+			}
+			& .title{
+				font-size: 60px;
+				color: $white;
+				line-height: 70px;
+				padding-right: 22px;
+				padding-top: 20px;
+				padding-bottom: 16px;
+				@media #{$lg} {
+					font-size: 56px;
+				}
+				@media #{$xs} {
+					font-size: 34px;
+					line-height: 46px;
+				}
+				@media #{$sm} {
+					font-size: 56px;
+					line-height: 70px;
+				}
+			}
+			& .text-1{
+				font-size: 24px;
+				color: #a1bbd7;
+				line-height: 36px;
+				padding-bottom: 25px;
+				@media #{$xs} {
+					font-size: 18px;
+				}
+				@media #{$sm} {
+					font-size: 24px;
+				}
+			}
+			& .text-2{
+				color: #c5d5e7;
+				padding-right: 30px;
+				@media #{$xs} {
+					padding-right: 0;
+				}
+			}
+			& a{
+				border-radius: 0;
+				margin-top: 45px;
+			}
+		}
+		& .intro-thumb{
+			position: relative;
+			z-index: 10;
+			& img{
+				@media #{$md} {
+					width: 100%;
+				}
+				@media #{$xs} {
+					width: 100%;
+				}
+			}
+			& a{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				height: 120px;
+				width: 120px;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 120px;
+				background: $theme-color;
+				z-index: 5;
+				& i{
+					font-size: 20px;
+					color: #c5d5e7;
+				}
+				&::after{
+					position: absolute;
+					content: '';
+					height: 100%;
+					width: 100%;
+					border-radius: 50%;
+					background: $white;
+					top: 0;
+					left: 0;
+					z-index: -1;
+					opacity: .6;
+					animation: play-btn-1 1.5s linear infinite;
+					
+				}
+			}
+			&::before{
+				position: absolute;
+				content: '';
+				width: 0;
+				height: 0;
+				border-bottom: 400px solid $theme-color;
+				border-left: 400px solid transparent;
+				right: 0;
+				bottom: -42px;
+				z-index: -1;
+				@media #{$lg} {
+					right: -30px;
+					bottom: -30px;
+				}
+				@media #{$md} {
+					right: -30px;
+					bottom: -30px;
+				}
+				@media #{$xs} {
+					display: none;
+				}
+				@media #{$sm} {
+					right: -30px;
+					bottom: -30px;
+					display: block;
+				}
+			}
+		}
+	}
+}
+
