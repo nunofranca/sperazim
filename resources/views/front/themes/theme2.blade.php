@@ -316,18 +316,7 @@
                             </div>
                         </div>
                         <div class="col-lg-12  mt-30">
-                            @if ($commonsetting->is_recaptcha == 1)
-                            <div class="d-inline-block">
-                              {!! NoCaptcha::renderJs() !!}
-                              {!! NoCaptcha::display() !!}
-                              @if ($errors->has('g-recaptcha-response'))
-                                @php
-                                    $errmsg = $errors->first('g-recaptcha-response');
-                                @endphp
-                                <p class="text-danger mb-0">{{__("$errmsg")}}</p>
-                              @endif
-                            </div>
-                        @endif
+                        
                             <div class="input-box text-center">
                                
                                 <button class="main-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" type="submit">{{ __('Message Us') }}</button>

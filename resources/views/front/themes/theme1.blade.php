@@ -437,18 +437,7 @@
 												
                                                     <button class="main-btn wow slideInUp d-inline-block" data-wow-duration="1.5s" data-wow-delay="0s" type="submit">{{ __('Send Message') }}
                                                     <i class="fal fa-long-arrow-right"></i></button>
-                                                    @if ($commonsetting->is_recaptcha == 1)
-                                                        <div class="mt-3 d-inline-block ml-4" >
-                                                            {!! NoCaptcha::renderJs() !!}
-                                                            {!! NoCaptcha::display() !!}
-                                                            @if ($errors->has('g-recaptcha-response'))
-                                                            @php
-                                                                $errmsg = $errors->first('g-recaptcha-response');
-                                                            @endphp
-                                                            <p class="text-danger mb-0">{{__("$errmsg")}}</p>
-                                                            @endif
-                                                        </div>
-                                                    @endif
+                                                
                                                 </div>
                                             </div> <!-- input box -->
                                         </div>

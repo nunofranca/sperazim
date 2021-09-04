@@ -42,8 +42,8 @@ class FrontendController extends Controller
 
         $commonsetting = Setting::where('id', 1)->first();
 
-        Config::set('captcha.sitekey', $commonsetting->google_recaptcha_site_key);
-        Config::set('captcha.secret', $commonsetting->google_recaptcha_secret_key);
+        //Config::set('captcha.sitekey', $commonsetting->google_recaptcha_site_key);
+      //  Config::set('captcha.secret', $commonsetting->google_recaptcha_secret_key);
     }
 
     // Home Page Funtions

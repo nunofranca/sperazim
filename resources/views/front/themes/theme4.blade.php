@@ -337,18 +337,7 @@
                             <textarea name="message" id="#" cols="30" rows="10" placeholder="{{ __('Message Us') }}"></textarea>
                         </div>
                         <div class="input-box mt-20">
-                            @if ($commonsetting->is_recaptcha == 1)
-                            <div class="">
-                              {!! NoCaptcha::renderJs() !!}
-                              {!! NoCaptcha::display() !!}
-                              @if ($errors->has('g-recaptcha-response'))
-                                @php
-                                    $errmsg = $errors->first('g-recaptcha-response');
-                                @endphp
-                                <p class="text-danger mb-0">{{__("$errmsg")}}</p>
-                              @endif
-                            </div>
-                        @endif
+                           
                             <button class="main-btn wow fadeInUp" data-wow-duration="1.6s" data-wow-delay=".2s" type="submit">{{ __('Send Message') }}</button>
                         </div>
                     </form>
